@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="darkPrimaryColor">#0288d1</color>  <!-- фон основной тень-->
+    <color name="primaryColor">#03a9f4</color>      <!-- фон основной под текст-->
+    <color name="lightPrimaryColor">#b3e5fc</color> <!-- фон основной текст-->
+    <color name="textColor">#ffffff</color>         <!-- текст-->
+    <color name="accentColor">#7c4dff</color>       <!-- фон кнопок-->
+    <color name="primaryTextColor">#212121</color>  <!-- текст кнопок-->
+    <color name="secondaryText">#727272</color>     <!-- неактивные кнопки текст-->
+    <color name="dividerText">#b6b6b6</color>       <!-- неактивные кнопки-->
+</resources>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/textView" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="4"
+            android:rowCount="4">
+
+            <Button
+                android:text="+/-"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:text="/"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:text="*"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:text="-"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="7"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="8"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button android:text="9"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:layout_gravity="fill_vertical"
+                android:text="+"
+                android:layout_rowSpan="2"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                android:text="4"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="5"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="6"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="1"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="2"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                 />
+            <Button
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:text="3"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                />
+            <Button
+
+                android:layout_gravity="fill_vertical"
+                android:text="="
+                android:layout_rowSpan="2"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                 />
+            <Button
+                android:layout_gravity="fill_horizontal"
+                android:layout_columnSpan="2"
+                android:text="0"
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_height="@dimen/button_height_normal"
+                />
+            <Button
+                android:text="."
+                android:textColor="@color/textColor"
+                android:backgroundTint="@color/accentColor"
+                android:layout_width="@dimen/button_width_normal"
+                android:layout_height="@dimen/button_height_normal"
+                />
+
+        </GridLayout>
+    </FrameLayout>
+
+</LinearLayout>
