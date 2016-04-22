@@ -8,8 +8,18 @@
     <color name="primaryColor">#03a9f4</color>      <!-- фон основной под текст-->
     <color name="lightPrimaryColor">#b3e5fc</color> <!-- фон основной текст-->
     <color name="textColor">#ffffff</color>         <!-- текст-->
+
     <color name="accentColor">#7c4dff</color>       <!-- фон кнопок-->
     <color name="primaryTextColor">#212121</color>  <!-- текст кнопок-->
     <color name="secondaryText">#727272</color>     <!-- неактивные кнопки текст-->
     <color name="dividerText">#b6b6b6</color>       <!-- неактивные кнопки-->
+
+    <color name="buttonOptionColor">#343234</color>
+    <color name="buttonOptionResultColor">#f2a134</color><!-- цвет кнопок-->
+    <color name="buttonColor">#231f24</color>
+    <color name="digitalDisplay">#000000</color>
+    <color name="workspace">#000000</color>
+
+    <color name="journal">#343234</color>
+    <color name="textColorJournal">#ffffff</color>         <!-- текст-->
 </resources>

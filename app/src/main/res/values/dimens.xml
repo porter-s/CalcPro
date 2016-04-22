@@ -2,8 +2,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">50dp</dimen>
     <dimen name="activity_vertical_margin">50dp</dimen>
-    <dimen name="button_width_normal">80dp</dimen>      <!-- ширина кнопок в режиме нормал-->
+    <dimen name="button_width_normal">94dp</dimen>      <!-- ширина кнопок в режиме нормал-->
     <dimen name="button_height_normal">80dp</dimen>     <!-- высота кнопок в режиме нормал-->
     <dimen name="button_text_size_normal">36sp</dimen>     <!-- размер текста в кнопках-->
-    <dimen name="text_size_normal">50sp</dimen>     <!-- размер текста в кнопках-->
+    <dimen name="text_size_normal">70sp</dimen>     <!-- размер текста в кнопках-->
 </resources>

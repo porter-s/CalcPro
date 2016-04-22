@@ -6,23 +6,71 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="30">
+        android:layout_weight="25">
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="015"
-            android:background="@color/primaryColor"
-            android:textColor="@color/textColor"
-            android:textSize="@dimen/text_size_normal"
-            android:id="@+id/textView"
-            android:minLines="3" />
+            android:background="@color/digitalDisplay">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="15"
+                android:background="@color/digitalDisplay"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size_normal"
+                android:id="@+id/textViewu"
+                android:minLines="3"
+                android:gravity="bottom|right"
+                android:layout_weight="85"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="10+5"
+                android:background="@color/digitalDisplay"
+                android:textColor="@color/textColor"
+                android:textSize="20dp"
+                android:id="@+id/textView"
+                android:minLines="1"
+                android:gravity="bottom|right"
+                android:layout_weight="15"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+        </LinearLayout>
+
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="70">
+        android:layout_weight="5"
+        android:background="@color/journal"
+
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Журнал"
+            android:id="@+id/textView2"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="center"
+            android:textColor="@color/textColorJournal"
+            android:background="@color/buttonOptionColor"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:background="@color/workspace">
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -34,7 +82,7 @@
             <Button
                 android:text="+/-"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonOptionColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
@@ -42,7 +90,7 @@
             <Button
                 android:text="/"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonOptionColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
@@ -50,7 +98,7 @@
             <Button
                 android:text="*"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonOptionColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
@@ -58,14 +106,14 @@
             <Button
                 android:text="-"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonOptionColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="7"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -73,7 +121,7 @@
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="8"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -81,7 +129,7 @@
                  />
             <Button android:text="9"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
@@ -91,13 +139,13 @@
                 android:text="+"
                 android:layout_rowSpan="2"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonOptionColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:textSize="@dimen/button_text_size_normal"
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:text="4"
@@ -105,7 +153,7 @@
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="5"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -113,7 +161,7 @@
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="6"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -121,7 +169,7 @@
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="1"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -129,7 +177,7 @@
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="2"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -137,7 +185,7 @@
                  />
             <Button
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:text="3"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
@@ -149,7 +197,7 @@
                 android:text="="
                 android:layout_rowSpan="2"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonOptionResultColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:textSize="@dimen/button_text_size_normal"
                  />
@@ -158,14 +206,14 @@
                 android:layout_columnSpan="2"
                 android:text="0"
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
                 />
             <Button
                 android:text="."
                 android:textColor="@color/textColor"
-                android:backgroundTint="@color/accentColor"
+                android:backgroundTint="@color/buttonColor"
                 android:layout_width="@dimen/button_width_normal"
                 android:layout_height="@dimen/button_height_normal"
                 android:textSize="@dimen/button_text_size_normal"
