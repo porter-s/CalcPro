@@ -34,7 +34,7 @@
                 android:layout_height="0dp"
                 android:text="10+5"
                 android:background="@color/digitalDisplay"
-                android:textColor="@color/textColor"
+                android:textColor="@color/dividerText"
                 android:textSize="20dp"
                 android:id="@+id/textView"
                 android:minLines="1"
