@@ -21,7 +21,7 @@
                 android:background="@color/digitalDisplay"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/text_size_normal"
-                android:id="@+id/textViewu"
+                android:id="@+id/tV_display"
                 android:minLines="3"
                 android:gravity="bottom|right"
                 android:layout_weight="85"
@@ -105,7 +105,8 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_option_style_normal"
-                            android:text="C" />
+                            android:text="C"
+                            android:id="@+id/b_clean" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -118,7 +119,8 @@
                             android:layout_marginRight="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:background="@color/button_option_style_normal" />
+                            android:background="@color/button_option_style_normal"
+                            android:id="@+id/b_brackets" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -131,7 +133,8 @@
                             android:layout_marginRight="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:background="@color/button_option_style_normal" />
+                            android:background="@color/button_option_style_normal"
+                            android:id="@+id/b_percent" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -147,7 +150,8 @@
                     android:layout_marginBottom="5dp"
                     android:background="@color/button_option_style_normal"
                     android:text="◄"
-                    android:singleLine="false" />
+                    android:singleLine="false"
+                    android:id="@+id/b_backspace" />
             </TableRow>
 
             <TableRow
@@ -178,7 +182,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_option_style_normal"
-                            />
+                            android:id="@+id/b_sign" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -192,7 +196,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_option_style_normal"
-                            />
+                            android:id="@+id/b_divide" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -206,7 +210,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_option_style_normal"
-                            />
+                            android:id="@+id/b_multiply" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -216,14 +220,14 @@
                     android:layout_width = "0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="22"
-                    android:text="−"
+                    android:text="-"
                     android:textColor="@color/textColor"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@color/button_option_style_normal"
-                    />
+                    android:id="@+id/b_minus" />
             </TableRow>
 
             <TableRow
@@ -256,7 +260,7 @@
                             android:background="@color/button_style_normal"
                             android:text="7"
 
-                            android:id="@+id/b7" />
+                            android:id="@+id/b_7" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -271,7 +275,7 @@
                             android:background="@color/button_style_normal"
                             android:text="8"
 
-                            android:id="@+id/b8" />
+                            android:id="@+id/b_8" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -285,7 +289,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_style_normal"
-                            android:id="@+id/b9" />
+                            android:id="@+id/b_9" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -307,7 +311,7 @@
                             android:background="@color/button_style_normal"
                             android:text="4"
 
-                            android:id="@+id/b4" />
+                            android:id="@+id/b_4" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -322,7 +326,7 @@
                             android:background="@color/button_style_normal"
                             android:text="5"
 
-                            android:id="@+id/b5" />
+                            android:id="@+id/b_5" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -337,7 +341,7 @@
                             android:background="@color/button_style_normal"
                             android:text="6"
 
-                            android:id="@+id/b6" />
+                            android:id="@+id/b_6" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -353,7 +357,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@color/button_option_style_normal"
-                    />
+                    android:id="@+id/b_plus" />
 
             </TableRow>
 
@@ -386,7 +390,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_style_normal"
-                            android:id="@+id/b1" />
+                            android:id="@+id/b_1" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -400,7 +404,7 @@
                             android:background="@color/button_style_normal"
                             android:textColor="@color/textColor"
                             android:text="2"
-                            android:id="@+id/b2" />
+                            android:id="@+id/b_2" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -414,7 +418,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_style_normal"
-                            android:id="@+id/b3" />
+                            android:id="@+id/b_3" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -435,7 +439,7 @@
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
                             android:background="@color/button_style_normal"
-                            android:id="@+id/b0" />
+                            android:id="@+id/b_0" />
 
                         <Button
                             android:textSize="@dimen/button_text_size_normal"
@@ -448,7 +452,8 @@
                             android:layout_marginRight="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="5dp"
-                            android:background="@color/button_style_normal" />
+                            android:background="@color/button_style_normal"
+                            android:id="@+id/b_dot" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -464,7 +469,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@color/button_style" />
+                    android:background="@color/button_style"
+                    android:id="@+id/b_equally" />
             </TableRow>
 
         </TableLayout>
