@@ -24,7 +24,7 @@
                 android:id="@+id/tV_display"
                 android:minLines="3"
                 android:gravity="bottom|right"
-                android:layout_weight="85"
+                android:layout_weight="80"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 />
@@ -39,7 +39,7 @@
                 android:id="@+id/textView"
                 android:minLines="1"
                 android:gravity="bottom|right"
-                android:layout_weight="15"
+                android:layout_weight="20"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 />

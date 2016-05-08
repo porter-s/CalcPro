@@ -121,7 +121,8 @@ public class SymbolInput {
                 break;
 
             case R.id.b_brackets:
-                Log.e(TAG,"b_plus");
+                Log.e(TAG,"b_brackets");
+                display.setOperationBracketsDisplay(_tV_display);
                 break;
         }
     }
