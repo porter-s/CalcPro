@@ -50,13 +50,14 @@ public class Display {
 
         int pos_o=buf_s.lastIndexOf('(');
         int pos_c=buf_s.lastIndexOf(')');
+        Boolean oper = false;
+        int poz=buf_s.length()-1;
+        if (poz>0)
+            if ((buf_s.charAt(poz)=='+')||(buf_s.charAt(poz)=='-')||(buf_s.charAt(poz)=='÷')||(buf_s.charAt(poz)=='×')) oper=true;
+        Log.e("b_brackets", "pos_o=" + pos_o + " pos_c=" + pos_c);
 
-        Log.e("b_brackets", "pos_o="+pos_o+" pos_c="+pos_c);
-        if( (pos_o<0)&&(pos_c<0))
-        {
-            _tV_display.setText(_tV_display.getText()+"(");
-        }else
-            if(pos_o<pos_c) _tV_display.setText(_tV_display.getText() + "(");
+        if( (pos_o<0)&&(pos_c<0)) _tV_display.setText(_tV_display.getText()+"(");
+        else if((pos_o<pos_c)||(oper)) _tV_display.setText(_tV_display.getText() + "(");
                 else  _tV_display.setText(_tV_display.getText() + ")");
     }
 }
