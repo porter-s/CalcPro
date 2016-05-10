@@ -1,6 +1,7 @@
 package ru.smekalin.calcpro.Classes;
 
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import ru.smekalin.calcpro.R;
@@ -13,7 +14,7 @@ public class SymbolInput {
     static String TAG = "SymbolInput";
     static Display display = new Display();
 
-    public static void inpSymbol(int _id, TextView _tV_display)
+    public static void inpSymbol(int _id, EditText _tV_display)
     {
         //Log.e(TAG,"key press");
 

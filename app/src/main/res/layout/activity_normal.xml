@@ -14,35 +14,47 @@
             android:layout_height="match_parent"
             android:background="@color/digitalDisplay">
 
-            <TextView
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="15"
-                android:background="@color/digitalDisplay"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/text_size_normal"
-                android:id="@+id/tV_display"
-                android:minLines="3"
-                android:gravity="bottom|right"
-                android:layout_weight="80"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                />
+                android:layout_weight="80">
 
-            <TextView
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="15"
+                    android:background="@color/digitalDisplay"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/text_size_normal"
+                    android:id="@+id/tV_display"
+                    android:gravity="top|right"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:maxLength="100"
+                    android:nestedScrollingEnabled="true"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:text="10+5"
-                android:background="@color/digitalDisplay"
-                android:textColor="@color/dividerText"
-                android:textSize="20dp"
-                android:id="@+id/textView"
-                android:minLines="1"
-                android:gravity="bottom|right"
-                android:layout_weight="20"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                />
+                android:layout_weight="20">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="10+5"
+                    android:background="@color/digitalDisplay"
+                    android:textColor="@color/dividerText"
+                    android:textSize="20dp"
+                    android:id="@+id/textView"
+                    android:minLines="1"
+                    android:gravity="bottom|right"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+            </FrameLayout>
         </LinearLayout>
 
     </FrameLayout>
@@ -100,10 +112,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="33"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_option_style_normal"
                             android:text="C"
                             android:id="@+id/b_clean" />
@@ -115,10 +127,10 @@
                             android:layout_weight="33"
                             android:text="( )"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_option_style_normal"
                             android:id="@+id/b_brackets" />
 
@@ -129,10 +141,10 @@
                             android:layout_weight="33"
                             android:text="%"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_option_style_normal"
                             android:id="@+id/b_percent" />
                     </LinearLayout>
@@ -144,10 +156,10 @@
                     android:layout_height="match_parent"
                     android:layout_weight="22"
                     android:textColor="@color/textColor"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/distance_buttons"
+                    android:layout_marginRight="@dimen/distance_buttons"
+                    android:layout_marginTop="@dimen/distance_buttons"
+                    android:layout_marginBottom="@dimen/distance_buttons"
                     android:background="@color/button_option_style_normal"
                     android:text="◄"
                     android:singleLine="false"
@@ -177,10 +189,10 @@
                             android:layout_weight="33"
                             android:text="+/−"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_option_style_normal"
                             android:id="@+id/b_sign" />
 
@@ -191,10 +203,10 @@
                             android:layout_weight="33"
                             android:text="÷"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_option_style_normal"
                             android:id="@+id/b_divide" />
 
@@ -205,10 +217,10 @@
                             android:layout_weight="33"
                             android:text="×"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_option_style_normal"
                             android:id="@+id/b_multiply" />
                     </LinearLayout>
@@ -222,10 +234,10 @@
                     android:layout_weight="22"
                     android:text="-"
                     android:textColor="@color/textColor"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/distance_buttons"
+                    android:layout_marginRight="@dimen/distance_buttons"
+                    android:layout_marginTop="@dimen/distance_buttons"
+                    android:layout_marginBottom="@dimen/distance_buttons"
                     android:background="@color/button_option_style_normal"
                     android:id="@+id/b_minus" />
             </TableRow>
@@ -253,10 +265,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.33"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:text="7"
 
@@ -268,10 +280,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.33"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:text="8"
 
@@ -284,10 +296,10 @@
                             android:layout_weight="0.33"
                             android:text="9"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:id="@+id/b_9" />
                     </LinearLayout>
@@ -304,10 +316,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.33"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:text="4"
 
@@ -319,10 +331,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.33"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:text="5"
 
@@ -334,10 +346,10 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.33"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:text="6"
 
@@ -352,10 +364,10 @@
                     android:layout_weight="22"
                     android:text="+"
                     android:textColor="@color/textColor"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/distance_buttons"
+                    android:layout_marginRight="@dimen/distance_buttons"
+                    android:layout_marginTop="@dimen/distance_buttons"
+                    android:layout_marginBottom="@dimen/distance_buttons"
                     android:background="@color/button_option_style_normal"
                     android:id="@+id/b_plus" />
 
@@ -385,10 +397,10 @@
                             android:layout_weight="0.33"
                             android:textColor="@color/textColor"
                             android:text="1"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:id="@+id/b_1" />
 
@@ -397,10 +409,10 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.33"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:textColor="@color/textColor"
                             android:text="2"
@@ -413,10 +425,10 @@
                             android:layout_weight="0.33"
                             android:text="3"
                             android:textColor="@color/textColor"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:id="@+id/b_3" />
                     </LinearLayout>
@@ -434,10 +446,10 @@
                             android:layout_weight="0.68"
                             android:textColor="@color/textColor"
                             android:text="0"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:id="@+id/b_0" />
 
@@ -448,10 +460,10 @@
                             android:layout_weight="0.32"
                             android:textColor="@color/textColor"
                             android:text="."
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="@dimen/distance_buttons"
+                            android:layout_marginRight="@dimen/distance_buttons"
+                            android:layout_marginTop="@dimen/distance_buttons"
+                            android:layout_marginBottom="@dimen/distance_buttons"
                             android:background="@color/button_style_normal"
                             android:id="@+id/b_dot" />
 
@@ -465,10 +477,10 @@
                     android:layout_weight="0.22"
                     android:text="="
                     android:textColor="@color/textColor"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="@dimen/distance_buttons"
+                    android:layout_marginRight="@dimen/distance_buttons"
+                    android:layout_marginTop="@dimen/distance_buttons"
+                    android:layout_marginBottom="@dimen/distance_buttons"
                     android:background="@color/button_style"
                     android:id="@+id/b_equally" />
             </TableRow>
