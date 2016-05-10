@@ -103,7 +103,7 @@ public class SymbolInput {
 
             case R.id.b_percent:
                 Log.e(TAG,"b_percent");
-                display.setOperationDisplay(_tV_display, "%");
+                display.setOperationPercentDisplay(_tV_display);
                 break;
 
             case R.id.b_sign:
