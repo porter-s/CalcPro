@@ -26,8 +26,22 @@ public class Display {
 
     public void setOperationDisplay(TextView _tV_display, String _str)
     {
-        if(_tV_display.getText()!="")
-            _tV_display.setText(_tV_display.getText()+_str);
+//        if(_tV_display.getText()!="")
+//            _tV_display.setText(_tV_display.getText()+_str);
+
+        String buf_s = new String();
+        buf_s = (String) _tV_display.getText();
+        int poz=buf_s.length()-1;
+
+        int kol_open=0, kol_close=0;
+
+        if (buf_s.length()!=0)
+        {
+            if ((buf_s.charAt(poz)!='.')&&(buf_s.charAt(poz)!='+')&&(buf_s.charAt(poz)!='-')&&(buf_s.charAt(poz)!='÷')&&(buf_s.charAt(poz)!='×')&&(buf_s.charAt(poz)!='(')) _tV_display.setText(_tV_display.getText()+_str);
+                else if((buf_s.charAt(poz)=='(')&&_str=="-") _tV_display.setText(_tV_display.getText()+_str);
+                    else if((buf_s.charAt(poz) == '(') && _str == "+") _tV_display.setText(_tV_display.getText()+_str);
+            Log.e(TAG, "buf_s.charAt(poz)="+buf_s.charAt(poz));
+        }
     }
 
     public void setOperationBackspaseDisplay(TextView _tV_display)
@@ -77,6 +91,24 @@ public class Display {
             if ((buf_s.charAt(poz)!='.')&&(buf_s.charAt(poz)!='+')&&(buf_s.charAt(poz)!='-')&&(buf_s.charAt(poz)!='÷')&&(buf_s.charAt(poz)!='×')&&(buf_s.charAt(poz)!='(')&&(buf_s.charAt(poz)!='%')) _tV_display.setText(_tV_display.getText()+"%");
             Log.e(TAG, "buf_s.charAt(poz)="+buf_s.charAt(poz));
         }
+    }
+
+    public void setOperationDotDisplay(TextView _tV_display)
+    {
+        String buf_s = new String();
+        buf_s = (String) _tV_display.getText();
+        int poz=buf_s.length()-1;
+
+        if (buf_s.length()!=0)
+        {
+            if ((buf_s.charAt(poz)!='.')&&(buf_s.charAt(poz)!='+')&&(buf_s.charAt(poz)!='-')&&(buf_s.charAt(poz)!='÷')&&(buf_s.charAt(poz)!='×')&&(buf_s.charAt(poz)!='(')&&(buf_s.charAt(poz)!='%'))
+            {
+
+            }
+            if ((buf_s.charAt(poz)==')')||(buf_s.charAt(poz)=='%')) _tV_display.setText(_tV_display.getText()+"×0.");
+                else if ((buf_s.charAt(poz)=='(')) _tV_display.setText(_tV_display.getText()+"0.");
+            Log.e(TAG, "buf_s.charAt(poz)="+buf_s.charAt(poz));
+        }else _tV_display.setText(_tV_display.getText()+"0.");
     }
 
 }

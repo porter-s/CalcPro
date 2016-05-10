@@ -112,7 +112,7 @@ public class SymbolInput {
 
             case R.id.b_dot:
                 Log.e(TAG,"b_dot");
-                display.setOperationDisplay(_tV_display, ".");
+                display.setOperationDotDisplay(_tV_display);
                 break;
 
             case R.id.b_plus:
