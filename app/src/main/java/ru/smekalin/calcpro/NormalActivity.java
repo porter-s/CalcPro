@@ -30,8 +30,6 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
         tV_display.setSelection(tV_display.length());
 
         tV_display.setTextIsSelectable(true);
-        //tV_display.setInputType(InputType.TYPE_NULL);
-
         tV_display.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -44,27 +42,6 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
                 return true;
             }
         });
-//        tV_display.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                tV_display.setFocusable(true);
-////                switch (event.getAction()) {
-////                    case MotionEvent.ACTION_DOWN:
-////                        Layout layout = ((EditText) v).getLayout();
-////                        float x = event.getX() + tV_display.getScrollX();
-////                        int offset = layout.getOffsetForHorizontal(0, x);
-////                        if(offset>0)
-////                            if(x>layout.getLineMax(0))
-////                                tV_display.setSelection(offset);
-////                            else
-////                                tV_display.setSelection(offset - 1);
-////                        break;
-////                }
-//                return true;
-//            }
-//        });
-
-
 
         b_0 = (Button) findViewById(R.id.b_0);
         b_1 = (Button) findViewById(R.id.b_1);
