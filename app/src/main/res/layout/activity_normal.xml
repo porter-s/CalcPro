@@ -22,17 +22,19 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="15"
-                    android:background="@color/digitalDisplay"
-                    android:textColor="@color/textColor"
+                    android:background="#ffffff"
+                    android:textColor="#000000"
                     android:textSize="@dimen/text_size_normal"
                     android:id="@+id/tV_display"
                     android:gravity="top|right"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:maxLength="100"
-                    android:nestedScrollingEnabled="true"
-                    />
+                    android:maxLines="3"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideOverlay"
+                    android:scrollbars="vertical"/>
+
             </FrameLayout>
 
             <FrameLayout

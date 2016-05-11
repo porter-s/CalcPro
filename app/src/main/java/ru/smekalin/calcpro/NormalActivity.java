@@ -44,6 +44,14 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
                 if (imm != null) {
                     imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                 }
+
+//                v.getParent().requestDisallowInterceptTouchEvent(true);
+//                switch (event.getAction() & MotionEvent.ACTION_MASK){
+//                    case MotionEvent.ACTION_UP:
+//                        v.getParent().requestDisallowInterceptTouchEvent(false);
+//                        break;
+//                }
+
                 return true;
             }
         });
@@ -102,66 +110,55 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         SymbolInput.inpSymbol(v.getId(), tV_display);
 
-
-        //      обработка вывода на дисплей уменьшение
         Float dens = getResources().getDisplayMetrics().density;
 
-//        if (tV_display.getTextSize() > tV_display.getHeight())
-//        {
-//            tV_display.setTextSize((tV_display.getHeight()/dens)-25);
-//            Log.e(TAG,"tV_display.setTextSize((tV_display.getHeight()/dens)-25)="+tV_display.getTextSize());
-//        }
-        if(tV_display.length()==100)
-        {
-            Toast toast = Toast.makeText(getApplicationContext(),"Максимальное колличество символов!(100)", Toast.LENGTH_SHORT);
-            toast.show();
-        }
-
-//        if (tV_display.getTextSize() > tV_display.getHeight())
-//        {
-//            tV_display.setTextSize((tV_display.getHeight() / dens) - 25);
-//        }
-
-        float a=0,b=0,c=0;
+        float a=0,b=0,c=0,f=0;
         a=(tV_display.getTextSize()/dens);
         b=tV_display.length()-1;
-        c=a*b;
-        Log.e(TAG," a="+ a+" b="+ b+" c="+ c);
-        Log.e(TAG,"StringSize="+((tV_display.getTextSize()/dens)*tV_display.length()-1)+"\n Width="+tV_display.getWidth()/dens);
-        Log.e(TAG,"length="+(tV_display.length()-1)+"\n Size="+(tV_display.getTextSize()/dens));
-        if (((tV_display.getTextSize()/dens)*tV_display.length()-1)>tV_display.getWidth()/dens)
-        {
+        c=a*b*2/3;
+        f=tV_display.getWidth()/dens;
 
-            while(((tV_display.getTextSize()/dens)*tV_display.length()-1)>tV_display.getWidth()/dens)
+        if (c>f)
+        {
+            float e=c;
+            while((e>f)&&(a>34))
             {
-                Log.e(TAG,"TextSize="+tV_display.getTextSize()/dens);
-                tV_display.setTextSize((tV_display.getTextSize()/dens)-2);
-                Log.e(TAG,"setTextSize="+tV_display.getTextSize()/dens);
+                Log.e(TAG, "e=" + e + " a="+a);
+                tV_display.setTextSize(a-2);
+                e=(a-2)*b*2/3;
+                a=a-2;
+                b=tV_display.length()-1;
+
             }
         }
 
-////        Log.e(TAG,"getLineCount="+tV_display.getLineCount()+"\n getTextSize="+tV_display.getTextSize());
-////        tV_display.setTextSize(60);
-//
-////        Log.e(TAG,"↓ "+(tV_display.getTextSize()*2/3*(tV_display.length()-1))+">"+tV_display.getWidth());
-////        if(tV_display.length()>1)
-//
-//        if ((tV_display.getTextSize()*2/3*(tV_display.length()-1) > tV_display.getWidth())&&(tV_display.getTextSize()>100))
-//        {
-//            tV_display.setTextSize(((tV_display.getWidth() - 10) * 3 / 2 / (tV_display.length() - 1) / dens));
-//            Log.e(TAG, "↓ " +" tV_display.getTextSize="+ tV_display.getTextSize() + "tV_display.getWidth()-10=" + (tV_display.getWidth() - 10) + "\n" + "(tV_display.length()-1)/dens=" + (tV_display.length() - 1) / dens + "\n");
-//            mass[kol]=tV_display.getTextSize()/4;
-//            kol++;
-//        }
-////
-//        Log.e(TAG,"dens = "+dens);
-//        if((tV_display.getLineCount()<=1)&&(kol>0)&&(v.getId()==R.id.b_backspace))
-//        {
-//
-//            kol--;
-//            tV_display.setTextSize(mass[kol]);
-//            Log.e(TAG, "qwerty="+ mass[kol]);
-//        }
+        if ((c<f)&&(tV_display.getLineCount()<2))
+        {
+            float e=c;
+            while((e<f)&&(a<60))
+            {
+                Log.e(TAG, "e=" + e + " a=" + a);
+                tV_display.setTextSize(a+2);
+                e=(a+2)*b*2/3;
+                a=a+2;
+                b=tV_display.length()-1;
+
+            }
+        }
 
     }
 }
+
+//android:layout_width="match_parent"
+//        android:layout_height="match_parent"
+//        android:text="15"
+//        android:background="@color/digitalDisplay"
+//        android:textColor="@color/textColor"
+//        android:textSize="@dimen/text_size_normal"
+//        android:id="@+id/tV_display"
+//        android:gravity="top|right"
+//        android:layout_marginLeft="5dp"
+//        android:layout_marginRight="5dp"
+//        android:maxLength="100"
+//        android:maxLines="4"
+//        android:nestedScrollingEnabled="true"
