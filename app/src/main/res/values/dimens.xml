@@ -4,7 +4,7 @@
     <dimen name="activity_vertical_margin">50dp</dimen>
     <dimen name="button_width_normal">94dp</dimen>      <!-- ширина кнопок в режиме нормал-->
     <dimen name="button_height_normal">80dp</dimen>     <!-- высота кнопок в режиме нормал-->
-    <dimen name="button_text_size_normal">28dp</dimen>     <!-- размер текста в кнопках-->
+    <dimen name="button_text_size_normal">28sp</dimen>     <!-- размер текста в кнопках-->
     <dimen name="text_size_normal">60sp</dimen>     <!-- размер текста display-->
 
     <dimen name="distance_buttons">2dp</dimen>     <!-- расстояние между кнопками-->
