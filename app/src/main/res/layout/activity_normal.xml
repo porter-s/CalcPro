@@ -22,8 +22,8 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#ffffff"
-                    android:textColor="#000000"
+                    android:background="@color/digitalDisplay"
+                    android:textColor="@color/textColor"
                     android:textSize="@dimen/text_size_normal"
                     android:id="@+id/tV_display"
                     android:gravity="top|right"
@@ -32,8 +32,12 @@
                     android:maxLength="100"
                     android:maxLines="3"
                     android:overScrollMode="always"
-                    android:scrollbarStyle="insideOverlay"
-                    android:scrollbars="vertical"/>
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:scrollbarThumbVertical="@color/buttonOptionResultColor"
+                    android:fadeScrollbars="true"
+                    android:scrollbarFadeDuration="3000"
+                    android:scrollbarSize="2sp"/>
 
             </FrameLayout>
 

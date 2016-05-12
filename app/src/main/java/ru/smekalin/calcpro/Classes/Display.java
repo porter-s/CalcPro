@@ -1,5 +1,6 @@
 package ru.smekalin.calcpro.Classes;
 
+import android.app.Instrumentation;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -48,17 +49,18 @@ public class Display {
 
     public void setOperationBackspaseDisplay(EditText _tV_display)
     {
-        if(_tV_display.length()!=0)
-        {
-            String buf_s = new String();
-            buf_s = String.valueOf(_tV_display.getText());
 
-            char buf_ch[] = new char[buf_s.length() - 1];
-            buf_s.getChars(0, buf_s.length() - 1, buf_ch, 0);
-
-            _tV_display.setText(String.valueOf(buf_ch));
-        }
-        _tV_display.setSelection(_tV_display.length());
+//        if(_tV_display.length()!=0)
+//        {
+//            String buf_s = new String();
+//            buf_s = String.valueOf(_tV_display.getText());
+//
+//            char buf_ch[] = new char[buf_s.length() - 1];
+//            buf_s.getChars(0, buf_s.length() - 1, buf_ch, 0);
+//
+//            _tV_display.setText(String.valueOf(buf_ch));
+//        }
+//        _tV_display.setSelection(_tV_display.length());
     }
 
     public void setOperationBracketsDisplay(EditText _tV_display)

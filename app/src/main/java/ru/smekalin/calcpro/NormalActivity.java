@@ -1,6 +1,7 @@
 package ru.smekalin.calcpro;
 
 import android.app.Activity;
+import android.app.Instrumentation;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import ru.smekalin.calcpro.Classes.Display;
+import ru.smekalin.calcpro.Classes.DisplayCalibration;
 import ru.smekalin.calcpro.Classes.SymbolInput;
 
 /**
@@ -108,44 +111,28 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        final Instrumentation inst = new Instrumentation();
+
+        if (v.getId()==R.id.b_backspace)
+            simulateKey(9);
         SymbolInput.inpSymbol(v.getId(), tV_display);
+        DisplayCalibration.Calibration(tV_display,this);
+    }
 
-        Float dens = getResources().getDisplayMetrics().density;
+    public static void simulateKey(final int KeyCode) {
 
-        float a=0,b=0,c=0,f=0;
-        a=(tV_display.getTextSize()/dens);
-        b=tV_display.length()-1;
-        c=a*b*2/3;
-        f=tV_display.getWidth()/dens;
-
-        if (c>f)
-        {
-            float e=c;
-            while((e>f)&&(a>34))
-            {
-                Log.e(TAG, "e=" + e + " a="+a);
-                tV_display.setTextSize(a-2);
-                e=(a-2)*b*2/3;
-                a=a-2;
-                b=tV_display.length()-1;
-
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Instrumentation inst = new Instrumentation();
+                    inst.sendKeyDownUpSync(KeyCode);
+                } catch (Exception e) {
+                    Log.e("simulateKey", e.toString());
+                }
             }
-        }
 
-        if ((c<f)&&(tV_display.getLineCount()<2))
-        {
-            float e=c;
-            while((e<f)&&(a<60))
-            {
-                Log.e(TAG, "e=" + e + " a=" + a);
-                tV_display.setTextSize(a+2);
-                e=(a+2)*b*2/3;
-                a=a+2;
-                b=tV_display.length()-1;
-
-            }
-        }
-
+        }.start();
     }
 }
 
@@ -162,3 +149,23 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
 //        android:maxLength="100"
 //        android:maxLines="4"
 //        android:nestedScrollingEnabled="true"
+
+
+//<EditText
+//android:layout_width="match_parent"
+//        android:layout_height="match_parent"
+//        android:background="@color/digitalDisplay"
+//        android:textColor="@color/textColor"
+//        android:textSize="@dimen/text_size_normal"
+//        android:id="@+id/tV_display"
+//        android:gravity="top|right"
+//        android:layout_marginLeft="5dp"
+//        android:layout_marginRight="5dp"
+//        android:maxLength="100"
+//        android:maxLines="3"
+//        android:overScrollMode="always"
+//        android:scrollbarStyle="outsideOverlay"
+//        android:scrollbars="vertical"
+//        android:scrollbarThumbVertical="@drawable/scrollbarthumb_normal"
+//        android:fadeScrollbars="true"
+//        android:scrollbarFadeDuration="3000"/>
