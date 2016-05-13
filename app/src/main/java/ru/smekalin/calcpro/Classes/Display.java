@@ -2,6 +2,7 @@ package ru.smekalin.calcpro.Classes;
 
 import android.app.Instrumentation;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -49,7 +50,7 @@ public class Display {
 
     public void setOperationBackspaseDisplay(EditText _tV_display)
     {
-
+        simulateKey(KeyEvent.KEYCODE_DEL);
 //        if(_tV_display.length()!=0)
 //        {
 //            String buf_s = new String();
@@ -129,4 +130,19 @@ public class Display {
         _tV_display.setSelection(_tV_display.length());
     }
 
+    public static void simulateKey(final int KeyCode) {
+
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Instrumentation inst = new Instrumentation();
+                    inst.sendKeyDownUpSync(KeyCode);
+                } catch (Exception e) {
+                    Log.e("simulateKey", e.toString());
+                }
+            }
+
+        }.start();
+    }
 }

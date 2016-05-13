@@ -27,8 +27,6 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
     Button b_1, b_2, b_3, b_4, b_5, b_6, b_7, b_8, b_9, b_0, b_backspace, b_clean, b_divide, b_equally, b_minus, b_multiply, b_percent, b_sign, b_plus, b_dot, b_brackets;
     EditText tV_display;
     String TAG = "NormalActivity";
-    Float[] mass= new Float[50];
-    int kol=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,14 +45,6 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
                 if (imm != null) {
                     imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
                 }
-
-//                v.getParent().requestDisallowInterceptTouchEvent(true);
-//                switch (event.getAction() & MotionEvent.ACTION_MASK){
-//                    case MotionEvent.ACTION_UP:
-//                        v.getParent().requestDisallowInterceptTouchEvent(false);
-//                        break;
-//                }
-
                 return true;
             }
         });
@@ -107,14 +97,8 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
         b_brackets.setOnClickListener(this);
     }
 
-
-
     @Override
     public void onClick(View v) {
-        final Instrumentation inst = new Instrumentation();
-
-        if (v.getId()==R.id.b_backspace)
-            simulateKey(9);
         SymbolInput.inpSymbol(v.getId(), tV_display);
         DisplayCalibration.Calibration(tV_display,this);
     }
@@ -135,37 +119,3 @@ public class NormalActivity  extends Activity implements View.OnClickListener {
         }.start();
     }
 }
-
-//android:layout_width="match_parent"
-//        android:layout_height="match_parent"
-//        android:text="15"
-//        android:background="@color/digitalDisplay"
-//        android:textColor="@color/textColor"
-//        android:textSize="@dimen/text_size_normal"
-//        android:id="@+id/tV_display"
-//        android:gravity="top|right"
-//        android:layout_marginLeft="5dp"
-//        android:layout_marginRight="5dp"
-//        android:maxLength="100"
-//        android:maxLines="4"
-//        android:nestedScrollingEnabled="true"
-
-
-//<EditText
-//android:layout_width="match_parent"
-//        android:layout_height="match_parent"
-//        android:background="@color/digitalDisplay"
-//        android:textColor="@color/textColor"
-//        android:textSize="@dimen/text_size_normal"
-//        android:id="@+id/tV_display"
-//        android:gravity="top|right"
-//        android:layout_marginLeft="5dp"
-//        android:layout_marginRight="5dp"
-//        android:maxLength="100"
-//        android:maxLines="3"
-//        android:overScrollMode="always"
-//        android:scrollbarStyle="outsideOverlay"
-//        android:scrollbars="vertical"
-//        android:scrollbarThumbVertical="@drawable/scrollbarthumb_normal"
-//        android:fadeScrollbars="true"
-//        android:scrollbarFadeDuration="3000"/>
